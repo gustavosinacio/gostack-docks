@@ -20,7 +20,7 @@
 
 ### Postbird
 
-  manage docker
+  manage databases
   
 ### ESLint
 
@@ -31,3 +31,10 @@
   make code prettier
   
 ### Editor config
+
+  set up configuration for multiple developers working on same 
+  code
+
+### MongoDB compass
+
+### nodemailer
