@@ -37,4 +37,23 @@
 
 ### MongoDB compass
 
+  manage your mongo database
+
 ### nodemailer
+
+  allows sending emails from node
+
+### Handlebars
+
+  email templates engine
+
+
+### redis (alpine)
+
+### Bee queue
+
+  task queuer for node
+
+### sentry 
+
+  monitoring errors
