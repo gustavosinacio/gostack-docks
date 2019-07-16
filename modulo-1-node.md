@@ -1,8 +1,3 @@
----
-title: Conceitos do NodeJS
-layout: 
----
-
 # Conceitos do NodeJS
 ## -> JS no backend
 

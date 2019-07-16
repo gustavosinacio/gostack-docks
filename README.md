@@ -4,6 +4,10 @@
 
 run:
 
-`bundle install `
+`bundle update`
+
+`bundle install`
 
 `bundle exec jekyll serve`
+
+[Configuring Jekyl](https://help.github.com/en/articles/configuring-jekyll)
