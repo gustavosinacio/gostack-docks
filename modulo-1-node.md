@@ -1,29 +1,30 @@
 # Conceitos do NodeJS
-## -> JS no backend
 
-* NÃO é uma **linguagem**, mas uma **plataforma**
+## -> JS backend
+
+* Not a **language**, but a **plataform**
 
 ## NPM/YARN
 
-* Gerenciadores de pacote
-* Utilizar yarn por ser mais rápido
-* Funciona como o **composer**
+* Package manager
+* Use yarn for better speeds
+* Works like php's **composer**
 
-## Características
+## Caracteristics
 
-* Baseada em eventos
-* Possui call stack (loop de chamadas de funcões)
+* Based on events
+* Works with call stack (function call loops)
 * Single thread
-* Non-blocking I/O (possível criar apps em tempo real)
+* Non-blocking I/O (create real time apps)
 
 ## Frameworks -> ExpressJS
 
-* Menos 'Opinado'
-* Permite criar apps com mais flexibilidade, mais com sua cara
-* Micro-serviços
+* Has less 'opinion'
+* Allows to build more flexible apps
+* Micro-services
 
-# Conceitos de API REST
+# API REST concepts
 
-* Pedidos e respostas
-* Não é MVC
-* Possibilita ser consumida por multiplos clientes (react, rn, etc)
+* Requests and responses
+* Not MVC
+* Allows being used by multiple clients (react, rn, etc)
