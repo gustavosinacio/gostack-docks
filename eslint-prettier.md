@@ -34,14 +34,9 @@ After all is installed and initialy configured, lets add a feel other configs
   ```javascript
   rules: {
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": ["warn", { extensions: [".jsx", ".js"] }]
+    "react/jsx-filename-extension": ["warn", { extensions: [".jsx", ".js"] }],
+    'import/prefer-default-export': 'off',
     },
-  ```
-
-* and add to the end:
-
-  ```javascript  
-  'import/prefer-default-export': 'off',
   ```
 
 ## Prettier:
