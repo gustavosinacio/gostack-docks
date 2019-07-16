@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Personal-Log-Error | GoStack-Docs</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Personal-Log-Error" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/personal-log-error.html" />
+<meta property="og:url" content="http://localhost:4000/personal-log-error.html" />
+<meta property="og:site_name" content="GoStack-Docs" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/personal-log-error.html","headline":"Personal-Log-Error","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=8d25887ff522ded6f980c405f587aaaca5ff722d">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">GoStack-Docs</a></h1>
+      
+
+      <h1 id="personal-log-error">Personal-Log-Error</h1>
+
+<ul>
+  <li>
+    <p>When first trying to insert into database</p>
+
+    <ul>
+      <li>Error: <code class="highlighter-rouge">INSERT INTO "Users" ("id","name","email","password_hash","created_at","updated_at") VALUES (DEFAULT,$1,$2,$3,$4,$5) RETURNING *</code></li>
+      <li>
+        <p>Description:
+The insertion was trying to insert into the table <code class="highlighter-rouge">Users</code>, when it should insert into <code class="highlighter-rouge">users</code></p>
+      </li>
+      <li>
+        <p>FIX:
+on the database config file</p>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module.exports = {
+dialect: 'postgres',
+host: 'localhost',
+username: 'postgres',
+password: 'docker',
+database: 'gobarber',
+define: {
+  timestamps: true,
+  underscored: true,          --&gt; These were written wrong, 'underscore' ***
+  underscoredAll: true,       --&gt; These were written wrong, 'underscoreAll' ***
+},
+</code></pre></div>        </div>
+
+        <p>So I changed <code class="highlighter-rouge">underscore</code> to <code class="highlighter-rouge">underscored</code> and <code class="highlighter-rouge">underscoreAll</code> to <code class="highlighter-rouge">underscoredAll</code> and it worked</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>

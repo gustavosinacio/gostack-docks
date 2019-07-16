@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>eslint/prettier | GoStack-Docs</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="eslint/prettier" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/eslint-prettier.html" />
+<meta property="og:url" content="http://localhost:4000/eslint-prettier.html" />
+<meta property="og:site_name" content="GoStack-Docs" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/eslint-prettier.html","headline":"eslint/prettier","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=8d25887ff522ded6f980c405f587aaaca5ff722d">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">GoStack-Docs</a></h1>
+      
+
+      <h1 id="eslintprettier">eslint/prettier</h1>
+
+<h2 id="eslint">eslint:</h2>
+
+<p><strong>Dependencies:</strong>
+<code class="highlighter-rouge">yarn add eslint prettier eslint-config-prettier eslint-plugin-prettier babel-prettier -D</code></p>
+
+<p>To creat eslint config, run * <code class="highlighter-rouge">yarn eslint --init</code> and configure it how you want</p>
+
+<p><strong>PS:</strong> I was unable to install the lib <code class="highlighter-rouge">babel-prettier</code> with `yarn add babel-prettier so I used npm, deleted the package-lock.json and ran yarn again to install all dependencies</p>
+
+<p>After all is installed and initialy configured, lets add a feel other configs</p>
+
+<h4 id="on-eslintrcjs">on <code class="highlighter-rouge">.eslintrc.js</code></h4>
+
+<ul>
+  <li>
+    <p>add to the extends block:</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">extends</span><span class="p">:</span> <span class="p">[</span>
+  <span class="s1">'airbnb'</span><span class="p">,</span>
+  <span class="s1">'prettier'</span><span class="p">,</span>       <span class="c1">// Add this</span>
+  <span class="s1">'prettier/react'</span>  <span class="c1">// And this</span>
+<span class="p">],</span> 
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>add the block:</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">parser</span><span class="p">:</span> <span class="s1">'babel-eslint'</span><span class="p">,</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>add to the rules block:</p>
+
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">rules</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">"prettier/prettier"</span><span class="p">:</span> <span class="s2">"error"</span><span class="p">,</span>
+  <span class="s2">"react/jsx-filename-extension"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"warn"</span><span class="p">,</span> <span class="p">{</span> <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="s2">".jsx"</span><span class="p">,</span> <span class="s2">".js"</span><span class="p">]</span> <span class="p">}],</span>
+  <span class="s1">'import/prefer-default-export'</span><span class="p">:</span> <span class="s1">'off'</span><span class="p">,</span>
+  <span class="p">},</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="prettier">Prettier:</h2>
+
+<p>create a <code class="highlighter-rouge">.prettierrc</code> and add:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="s2">"singleQuote"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">"trailingComma"</span><span class="p">:</span> <span class="s2">"es5"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>

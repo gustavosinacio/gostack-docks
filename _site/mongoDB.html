@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>MongoDB | GoStack-Docs</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="MongoDB" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/mongoDB.html" />
+<meta property="og:url" content="http://localhost:4000/mongoDB.html" />
+<meta property="og:site_name" content="GoStack-Docs" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/mongoDB.html","headline":"MongoDB","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=8d25887ff522ded6f980c405f587aaaca5ff722d">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">GoStack-Docs</a></h1>
+      
+
+      <h1 id="mongodb">MongoDB</h1>
+
+<h2 id="instalation">Instalation:</h2>
+<p><strong>This mongoDB will be set using docker</strong></p>
+
+<p>to install the container, run: 
+  <code class="highlighter-rouge">docker run --name mongobarber -p 27017:27017 -d -t mongo</code></p>
+
+<p>and to add mongoose to your project:
+  <code class="highlighter-rouge">yarn add mongoose</code></p>
+
+<h2 id="code">Code</h2>
+
+<p>Inside your migrations index, start your mongo connection using mongoose:</p>
+
+<pre><code>
+mongo() {
+  this.mongoConnection = mongoose.connect(
+    'mongodb://localhost:[port]/[database name]'
+  );
+}
+</code></pre>
+
+<p>make sure to run this function on your Database constructor:</p>
+
+<pre><code>
+class Database {
+  constructor() {
+    this.init();
+    this.mongo();
+  }
+  .
+  .
+  .
+</code></pre>
+
+<h2 id="management-tool-for-mongo">Management tool for mongo</h2>
+
+<p><a href="https://www.mongodb.com/download-center/compass">MongoDB compass download center</a></p>
+
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>
