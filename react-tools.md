@@ -20,3 +20,8 @@
 
 ## react-icons
   icons packages
+
+## reactotron
+
+  From the oficial README: 
+  `Reactotron is a macOS, Windows, and Linux app for inspecting your React JS and React Native apps.`
