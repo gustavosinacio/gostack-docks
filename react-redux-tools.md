@@ -1,4 +1,4 @@
-# FRONTEND Tools
+# frontend tools
 
 
 ## babel
@@ -24,4 +24,10 @@
 ## reactotron
 
   From the oficial README: 
+
   `Reactotron is a macOS, Windows, and Linux app for inspecting your React JS and React Native apps.`
+
+## immer
+  From the oficial README: 
+  
+  `Create the next immutable state tree by simply modifying the current tree`
