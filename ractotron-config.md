@@ -24,7 +24,13 @@ Find the official app on the [Reactotron repository](https://github.com/infinite
 ```
 ---
 3. on `src/store/index`:
+- Add `applyMiddleware` and `compose` to redux's import:
+```js
+import { createStore, applyMiddleware, compose } from 'redux';
+```
+
 - create an enhancer
+
 ```js
 const enhancer =
   process.env.NODE_ENV === 'development'

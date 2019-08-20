@@ -3,7 +3,7 @@
 ## eslint:
 
 **Dependencies:**
-`yarn add eslint prettier eslint-config-prettier eslint-plugin-prettier babel-prettier -D` 
+`yarn add eslint prettier eslint-config-prettier eslint-plugin-prettier babel-prettier(or is it babel-eslint?) -D` 
 
 To creat eslint config, run * `yarn eslint --init` and configure it how you want
 
