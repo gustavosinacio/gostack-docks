@@ -3,7 +3,10 @@
 ## eslint:
 
 **Dependencies:**
-`yarn add eslint prettier eslint-config-prettier eslint-plugin-prettier babel-prettier -D` 
+`yarn add eslint prettier eslint-config-prettier eslint-plugin-prettier babel-prettier(or is it babel-eslint?) -D` 
+
+If you are using hooks, add also:
+`yarn add eslint-plugin-react-hooks -D`
 
 To creat eslint config, run * `yarn eslint --init` and configure it how you want
 
@@ -29,13 +32,29 @@ After all is installed and initialy configured, lets add a few other configs
   parser: 'babel-eslint',
   ```
 
+* add `prettier` to `plugins`, like so:
+```js
+  plugins: ['react', 'prettier', 'react-hooks'], 
+  // add 'react-hooks' only when using hooks
+
+```
+
 * add to the rules block:
 
   ```javascript
   rules: {
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": ["warn", { extensions: [".jsx", ".js"] }],
+    "react/jsx-filename-extension": [
+      'warn', 
+      { 
+        extensions: ['.jsx', '.js']
+      }
+    ],
     'import/prefer-default-export': 'off',
+    'no-param-reassign': 'off',
+    'no-console': ['error', { allow: ['tron'] }], // this is for when using reactotron
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps':'warn'
     },
   ```
 
