@@ -9,7 +9,7 @@ To creat eslint config, run * `yarn eslint --init` and configure it how you want
 
 **PS:** I was unable to install the lib `babel-prettier` with `yarn add babel-prettier so I used npm, deleted the package-lock.json and ran yarn again to install all dependencies
 
-After all is installed and initialy configured, lets add a feel other configs
+After all is installed and initialy configured, lets add a few other configs
 
 #### on `.eslintrc.js` 
 
